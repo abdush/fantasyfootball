@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package com.fantasy.football.model;
+
+import java.sql.Time;
+
+/**
+ *
+ * @author Abdu
+ */
+public class RedCardEvent extends MatchEvent {
+    
+    private static final double AVG_RED_CARDS_PER_GAME = 0.3;
+
+    public RedCardEvent(int minute, Team team, Player player) {
+        super(minute, team, player);
+    }
+    
+    @Override
+    public String toString() {
+        return "[Red Card: " + minute + " ] " + player + " [" + team + "]\n";
+    }
+}
